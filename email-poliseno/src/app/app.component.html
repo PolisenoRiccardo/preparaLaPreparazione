@@ -9,5 +9,5 @@
   <input type="text" name = 'Contenuto' #newcontent> <!--Input che restituisce la variabile newcontent-->
   <label for="to"> Contenuto</label>
   <br>
-  <button>Invia</button>
+  <button (click) = "nuovaMail(newdestination, newsubject, newcontent)">Invia</button> <!--al click richiama la funzione nuovaMail, e ne passa i parametri nelle parentesi, i parametri inseriti sono le variabile legate agli input-->
 </form>

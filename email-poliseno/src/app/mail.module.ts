@@ -3,9 +3,9 @@ export class Email {
     subject: string; 
     text: string;
   
-    constructor(receiver: HTMLInputElement, subject: HTMLInputElement, text: HTMLInputElement) { //costruttore (come __init__() di python)
-      this.receiver = receiver.value; // Si specifica .value per restituire la stringa inserita dall'input
-      this.subject = subject.value; //this è come il self di python, serve a riferirsi alle proprietà della classe 
-      this.text = text.value;
+    constructor(receiver: string, subject: string, text: string) { //costruttore (come __init__() di python)
+      this.receiver = receiver; // Si specifica .value per restituire la stringa inserita dall'input
+      this.subject = subject; //this è come il self di python, serve a riferirsi alle proprietà della classe 
+      this.text = text;
     }
   }
