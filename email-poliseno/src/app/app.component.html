@@ -11,3 +11,7 @@
   <br>
   <button (click) = "nuovaMail(newdestination, newsubject, newcontent)">Invia</button> <!--al click richiama la funzione nuovaMail, e ne passa i parametri nelle parentesi, i parametri inseriti sono le variabile legate agli input-->
 </form>
+
+<div>
+  <app-sent-mail *ngFor = "let mail of casella" [mail] = 'mail' ></app-sent-mail>
+</div>
