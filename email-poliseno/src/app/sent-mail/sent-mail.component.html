@@ -1,4 +1,4 @@
 <div>
-    <span>{{mail.subject}} - {{mail.receiver}} </span><button>espandi</button><br>
-    <span>{{mail.text}}</span> 
+    <span>{{mail.subject}} - {{mail.receiver}} </span><button (click) = 'espandi()' >espandi</button><br>
+    <span *ngIf="nascondi">{{mail.text}}</span> 
 </div>

@@ -8,7 +8,12 @@ import { Email } from '../app.mail';
 })
 export class SentMailComponent {
   @Input() mail: Email;
+  nascondi : boolean;
   constructor() {
     this.mail = new Email('Sandro', 'Scusami', 'Dopo spinterogeno...')
+    this.nascondi = false
+  }
+  espandi() {
+    this.nascondi = !this.nascondi // inverte il boolean 
   }
 }
