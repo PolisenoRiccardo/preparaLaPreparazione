@@ -1,17 +1,24 @@
-<h1>Mail</h1>
-<form>
-  <input type="text" name = 'to' #newdestination> <!--Input che restituisce la variabile newdestination-->
-  <label for="to"> A</label>
-  <br>
-  <input type="text" name = 'Oggetto' #newsubject> <!--Input che restituisce la variabile newsubject-->
-  <label for="to"> Oggetto</label>
-  <br>
-  <input type="text" name = 'Contenuto' #newcontent> <!--Input che restituisce la variabile newcontent-->
-  <label for="to"> Contenuto</label>
-  <br>
-  <button (click) = "nuovaMail(newdestination, newsubject, newcontent)">Invia</button> <!--al click richiama la funzione nuovaMail, e ne passa i parametri nelle parentesi, i parametri inseriti sono le variabile legate agli input-->
-</form>
+<div class="container">
+  <form class="jumbotron">
+      <h3 class="display-4">Mail</h3>
+      <div class="form-group">
+        <label for="to">Destinatario:</label>
+        <input type="text" name = 'to' class="form-control" #newreceiver>
+      </div>
+      <div class="form-group">
+        <label for="Oggetto">Oggetto:</label>
+        <input type="text" name = 'Oggetto' class="form-control" #newsubject>
+      </div>
+      <div class="form-group">
+        <label for="Contenuto">Testo:</label>
+        <input type="text" name = 'Contenuto' class="form-control" #newtext>
+      </div>
+    <button (click)="nuovaMail(newreceiver, newsubject, newtext)" class="btn btn-primary mt-2">
+      Invia
+    </button>
+  </form>
+</div>
 
-<div>
-  <app-sent-mail *ngFor = "let mail of casella" [mail] = 'mail' ></app-sent-mail>
+<div class="container">
+<app-sent-mail *ngFor = "let mail of casella" [mail] = 'mail' ></app-sent-mail>
 </div>

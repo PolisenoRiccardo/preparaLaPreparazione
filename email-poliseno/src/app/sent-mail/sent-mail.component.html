@@ -1,4 +1,7 @@
-<div>
-    <span>{{mail.subject}} - {{mail.receiver}} </span><button (click) = 'espandi()' >espandi</button><br>
-    <span *ngIf="nascondi">{{mail.text}}</span> 
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{mail.subject}} | {{mail.receiver}}</h5> 
+      <p class="card-text" *ngIf = 'nascondi'>{{mail.text}}</p>
+      <a href="#" class="btn btn-primary" (click) = 'espandi()'>Espandi</a>
+    </div>
 </div>

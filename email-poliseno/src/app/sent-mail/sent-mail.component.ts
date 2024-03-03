@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { Email } from '../app.mail';
 
 @Component({
@@ -7,6 +7,7 @@ import { Email } from '../app.mail';
   styleUrls: ['./sent-mail.component.css']
 })
 export class SentMailComponent {
+  @HostBinding('attr.class') cssClass = 'card mt-3';
   @Input() mail: Email;
   nascondi : boolean;
   constructor() {
