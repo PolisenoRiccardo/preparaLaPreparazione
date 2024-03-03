@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Email } from './mail.module'; // importa la classe Email
+import { Email } from './app.mail'; // importa la classe Email
 
 
 @Component({
